@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
-#include <stdint.h>	/* uintptr_t */
-#include <inttypes.h>	/* PRIiPTR */
 #include <pthread.h>
 
 #define NUM_THREADS 5
