@@ -27,7 +27,7 @@ void * scrittore(void* arg){
         pthread_mutex_lock(&mutexBuffer);
         //sezione critica
         buffer = dato;
-        printf("scrittore %" PRIiPTR " scrive %d \n", (intptr_t)arg,buffer);
+        printf("scrittore %d  scrive %d \n", (intptr_t)arg,buffer);
         //sleep(1);
         pthread_mutex_unlock(&mutexBuffer);
     }
@@ -45,7 +45,7 @@ void * lettore(void* arg){
 
         //sezione critica
         dato = buffer;
-        printf("lettore %" PRIiPTR " legge %d\n", (intptr_t)arg,dato);
+        printf("lettore %d  legge %d\n", (intptr_t)arg,dato);
         //sleep(1);
         pthread_mutex_lock(&mutexVarLettori);
         numeroLettoriLettura--;
